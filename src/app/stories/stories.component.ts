@@ -15,7 +15,7 @@ export class StoriesComponent implements OnInit {
   }
 
   ngOnInit() {
-    this._service.fetchStories()
+    this._service.fetchStories('news', 1)
       .subscribe(
         items => this.items = items,
         error => console.error('Error fetching stories.')
