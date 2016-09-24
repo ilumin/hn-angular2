@@ -1,1 +1,43 @@
-<p>Story #{{itemID}}<p>
+<div class="loading-section" *ngIf="!item">
+
+</div>
+<div *ngIf="item">
+    <div class="item-laptop">
+        <p>
+            <a href="{{ item.url }}" class="title">{{ item.title }}</a>
+            <span *ngIf="item.domain" class="domain">({{item.domain}})</span>
+        </p>
+        <div class="subtext-laptop">
+            {{ item.score }} points by <a href="">{{ item.by }}</a>
+            {{ item.time_ago }}
+            <a href="">
+                <span *ngIf="item.descendants !== 0">
+                    {{ item.descendants }}
+                    <span *ngIf="item.descendants === 1">comment</span>
+                    <span *ngIf="item.descendants > 1">comments</span>
+                </span>
+                <span *ngIf="item.descendants === 0">discuss</span>
+            </a>
+        </div>
+    </div>
+    <div class="item-mobile">
+        <p>
+            <a href="{{ item.url }}" class="title">{{ item.title }}</a>
+            <span *ngIf="item.domain" class="domain">({{item.domain}})</span>
+        </p>
+        <div class="subtext-palm">
+            <div class="details">
+                <span class="name"> <a href="">{{item.user}}</a></span>
+                <span class="right">{{item.score}} ★</span>
+            </div>
+            <a href="">
+                <span *ngIf="item.descendants !== 0">
+                    {{ item.descendants }}
+                    <span *ngIf="item.descendants === 1">comment</span>
+                    <span *ngIf="item.descendants > 1">comments</span>
+                </span>
+                <span *ngIf="item.descendants === 0">discuss</span>
+            </a>
+        </div>
+    </div>
+</div>
