@@ -28,7 +28,7 @@ $tablet-only: "only screen and (max-width: 1024px)";
 @media #{$mobile-only} {
   .item {
     box-sizing: border-box;
-    padding: 110px 15px 0 15px;
+    padding: 30px 15px 0 15px;
   }
 }
 
