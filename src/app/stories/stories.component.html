@@ -1,14 +1,14 @@
 <div class="main-content">
   <div class="loading-section" *ngIf="!items"></div>
   <div *ngIf="items">
-    <ol>
+    <ol start="{{ listStart }}">
       <li class="post" *ngFor="let item of items">
         <item class="item-block" [item]="item"></item>
       </li>
     </ol>
     <div class="nav">
-      <a href="" class="prev">&lt; Prev</a>
-      <a href="" class="more">More &gt;</a>
+      <a *ngIf="listStart !== 1" [routerLink]="['/' + storiesType, pageNum - 1]" class="prev">&lt; Prev</a>
+      <a *ngIf="items.length === 30" [routerLink]="['/' + storiesType, pageNum + 1]" class="more">More &gt;</a>
     </div>
   </div>
 </div>
