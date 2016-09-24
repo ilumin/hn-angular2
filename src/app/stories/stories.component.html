@@ -1,3 +1,11 @@
-<p>
-  stories works!
-</p>
+<div class="main-content">
+  <ol>
+    <li class="post" *ngFor="let item of items; let i = index">
+      Story #{{i}}
+    </li>
+  </ol>
+  <div class="nav">
+    <a href="" class="prev">&lt; Prev</a>
+    <a href="" class="more">More &gt;</a>
+  </div>
+</div>

@@ -6,8 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./stories.component.scss']
 })
 export class StoriesComponent implements OnInit {
+  items: number[];
 
-  constructor() { }
+  constructor() { 
+    this.items = Array(30).fill(1).map((x,i) => i);
+    console.log(this.items);
+  }
 
   ngOnInit() {
   }
