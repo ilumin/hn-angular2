@@ -9,7 +9,7 @@ import { StoriesComponent } from './stories/stories.component';
 import { FooterComponent } from './footer/footer.component';
 import { ItemComponent } from './item/item.component';
 
-import { HackerNewsAPIService } from './hackernews-api.service';
+import { HackernewsApiService } from './hackernews-api.service';
 
 @NgModule({
   declarations: [
@@ -24,7 +24,7 @@ import { HackerNewsAPIService } from './hackernews-api.service';
     FormsModule,
     HttpModule
   ],
-  providers: [HackerNewsAPIService],
+  providers: [HackernewsApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
