@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-comment-link',
@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./comment-link.component.scss']
 })
 export class CommentLinkComponent implements OnInit {
+  @Input() item;
 
   constructor() { }
 
