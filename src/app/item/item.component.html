@@ -4,20 +4,10 @@
 <div *ngIf="item">
     <div class="item-laptop">
         <app-item-subject [item]="item" renderType="laptop"></app-item-subject>
-        <div class="subtext-laptop">
-            {{ item.points }} points by <a href="">{{ item.user }}</a>
-            {{ item.time_ago }}
-            <app-comment-link [item]="item"></app-comment-link>
-        </div>
+        <app-item-meta [item]="item" renderType="laptop"></app-item-meta>
     </div>
     <div class="item-mobile">
         <app-item-subject [item]="item" renderType="mobile"></app-item-subject>
-        <div class="subtext-palm">
-            <div class="details">
-                <span class="name"> <a href="">{{item.user}}</a></span>
-                <span class="right">{{item.points}} ★</span>
-            </div>
-            <app-comment-link [item]="item"></app-comment-link>
-        </div>
+        <app-item-meta [item]="item" renderType="mobile"></app-item-meta>
     </div>
 </div>

@@ -1,3 +1,14 @@
-<p>
-  item-meta works!
-</p>
+<div *ngIf="renderType === 'mobile'" class="subtext-palm">
+    <div class="details">
+        <span class="name"> <a href="">{{item.user}}</a></span>
+        <span class="right">{{item.points}} ★</span>
+    </div>
+    {{ item.time_ago }}
+    <app-comment-link [item]="item"></app-comment-link>
+</div>
+
+<div *ngIf="renderType === 'laptop'" class="subtext-laptop">
+    {{ item.points }} points by <a href="">{{ item.user }}</a>
+    {{ item.time_ago }}
+    <app-comment-link [item]="item"></app-comment-link>
+</div>
