@@ -17,6 +17,7 @@ import { CommentTreeComponent } from './comment-tree/comment-tree.component';
 import { CommentComponent } from './comment/comment.component';
 import { CommentLinkComponent } from './comment-link/comment-link.component';
 import { ItemSubjectComponent } from './item-subject/item-subject.component';
+import { ItemMetaComponent } from './item-meta/item-meta.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { ItemSubjectComponent } from './item-subject/item-subject.component';
     CommentTreeComponent,
     CommentComponent,
     CommentLinkComponent,
-    ItemSubjectComponent
+    ItemSubjectComponent,
+    ItemMetaComponent
   ],
   imports: [
     BrowserModule,
