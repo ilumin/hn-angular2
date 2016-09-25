@@ -3,10 +3,7 @@
 </div>
 <div *ngIf="item">
     <div class="item-laptop">
-        <p>
-            <a [routerLink]="['/item', item.id]" class="title">{{ item.title }}</a>
-            <span *ngIf="item.domain" class="domain">({{item.domain}})</span>
-        </p>
+        <app-item-subject [item]="item" renderType="laptop"></app-item-subject>
         <div class="subtext-laptop">
             {{ item.points }} points by <a href="">{{ item.user }}</a>
             {{ item.time_ago }}
@@ -14,10 +11,7 @@
         </div>
     </div>
     <div class="item-mobile">
-        <p>
-            <a [routerLink]="['/item', item.id]" class="title">{{ item.title }}</a>
-            <span *ngIf="item.domain" class="domain">({{item.domain}})</span>
-        </p>
+        <app-item-subject [item]="item" renderType="mobile"></app-item-subject>
         <div class="subtext-palm">
             <div class="details">
                 <span class="name"> <a href="">{{item.user}}</a></span>

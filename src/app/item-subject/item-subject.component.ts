@@ -7,8 +7,11 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class ItemSubjectComponent implements OnInit {
   @Input() item;
+  renderType: string;
 
-  constructor() { }
+  constructor() { 
+    this.renderType = this.renderType ? this.renderType : 'laptop';
+  }
 
   ngOnInit() {
   }
