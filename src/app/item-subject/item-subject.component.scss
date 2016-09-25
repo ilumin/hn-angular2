@@ -1,0 +1,15 @@
+.item-subject {
+    font-size: 12px;
+    color: #696969;
+    letter-spacing: 0.5px;
+
+    a {
+        font-size: 13px;
+        color: #b92b27;
+        font-weight: bold;
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+        };
+    }
+}
