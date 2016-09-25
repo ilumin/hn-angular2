@@ -3,12 +3,12 @@
         <span class="name"> <a href="">{{item.user}}</a></span>
         <span class="right">{{item.points}} ★</span>
     </div>
-    {{ item.time_ago }}
+    {{ item.time_ago }} &#9679;
     <app-comment-link [item]="item"></app-comment-link>
 </div>
 
 <div *ngIf="renderType === 'laptop'" class="subtext-laptop">
     {{ item.points }} points by <a href="">{{ item.user }}</a>
-    {{ item.time_ago }}
+    {{ item.time_ago }} &#9679;
     <app-comment-link [item]="item"></app-comment-link>
 </div>
