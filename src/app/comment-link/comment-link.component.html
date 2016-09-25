@@ -1,4 +1,4 @@
-<a [routerLink]="['/item', item.id]">
+<a [routerLink]="['/item', item.id]" class="comment-link">
   <span *ngIf="item.comments_count !== 0">
     {{ item.comments_count }}
     <span *ngIf="item.comments_count === 1">comment</span>
