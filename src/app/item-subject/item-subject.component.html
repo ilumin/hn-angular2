@@ -1,3 +1,4 @@
 <p>
-  item-subject works!
+  <a [routerLink]="['/item', item.id]" class="title">{{ item.title }}</a>
+  <span *ngIf="item.domain" class="domain">({{item.domain}})</span>
 </p>
